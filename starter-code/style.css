@@ -105,6 +105,15 @@ body {
 .content .content_input_btn {
   background: var(--green-1);
   color: #121725;
+  cursor: pointer;
+}
+
+.content .content_input_btn:focus {
+  background-color: #b3ffe2;
+  transform: scale(0.98);
+}
+
+.content .content_input_btn:target {
 }
 
 @media (min-width: 768px) {
