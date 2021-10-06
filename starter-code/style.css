@@ -114,31 +114,44 @@ body {
     background: var(--background-color);
   }
   body::before {
-    content: url("./assets/tablet/image-host.jpg");
+    content: "";
+    background-image: url("./assets/tablet/image-host.jpg");
+    width: 491px;
+    height: 767px;
     position: absolute;
     z-index: -1;
-    top: -50px;
+    top: 0px;
     right: 0px;
   }
   body::after {
     content: url("./assets/desktop/bg-pattern-dots.svg");
     position: absolute;
     left: 30px;
-    bottom: 50px;
+    bottom: 0px;
     z-index: -1;
   }
   .pod {
-    margin: 50px 0 152px 39px;
+    margin: 0 0 0 39px;
+    height: 258px;
   }
+
+  .pod .pod_logo {
+    margin-top: 50px;
+  }
+
   .content {
     max-width: 660px;
     height: 564px;
     margin: 0 0 0 14px;
     background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   .content .content_title {
     font-size: 48px;
     margin-bottom: 31px;
+    line-height: 56px;
   }
   .content .content_text {
     max-width: 445px;
@@ -181,5 +194,35 @@ body {
   }
   .content .content_logo {
     margin-right: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+  }
+  body::before {
+    background-image: url("./assets/desktop/image-host.jpg");
+    width: 888px;
+    height: 640px;
+    top: 130px;
+  }
+  body::after {
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: 716px;
+  }
+  .pod {
+    height: 261px;
+    margin-left: 165px;
+  }
+  .pod .pod_logo {
+    margin-top: 102px;
+  }
+  .content {
+    width: 723px;
+    height: 509px;
+    margin-left: 165px;
   }
 }
