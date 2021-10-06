@@ -23,11 +23,6 @@
   --space-sm: 0.5rem;
   --space-md: 1rem;
   --space-lg: 2rem;
-
-  --rounded-sm: 8px;
-  --rounded: 16px;
-
-  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 body {
@@ -86,6 +81,10 @@ body {
   height: 100%;
 }
 
+.content .content_input-container {
+  position: relative;
+}
+
 .content .content_input,
 .content .content_input_btn {
   display: block;
@@ -110,13 +109,25 @@ body {
 
 .content .content_input_btn:focus {
   background-color: #b3ffe2;
-  transform: scale(0.98);
 }
 
 .content .content_input_btn:target {
+  transform: scale(0.98);
+}
+
+#text {
+  position: absolute;
+  top: -24px;
+  left: 29px;
 }
 
 @media (min-width: 768px) {
+  #text {
+    position: absolute;
+    top: 63px;
+    left: 32px;
+  }
+
   body {
     max-width: 100%;
     position: relative;
